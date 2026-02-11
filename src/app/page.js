@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServiceCards from "@/components/ServiceCards";
 
 const features = [
   {
@@ -24,9 +25,9 @@ const features = [
     ),
   },
   {
-    title: "On-Time Delivery",
+    title: "Advanced Fleet Network",
     description:
-      "98% on-time delivery rate ensuring your goods reach their destination as scheduled.",
+      "Modern, well-maintained vehicles equipped with technology to ensure safe and efficient transportation.",
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -88,35 +89,6 @@ const clientLogos = [
   { src: "/images/logo-flipkart.png", alt: "Flipkart" },
 ];
 
-const services = [
-  {
-    title: "Vehicle Transportation",
-    description:
-      "We transport vehicles safely from OEM plants to dealerships across India, ensuring timely and secure delivery in factory condition.",
-    image: "/images/home-service-vehicle.jpg",
-    rotation: "",
-    opacity: "",
-    zIndex: "z-10",
-  },
-  {
-    title: "E-Commerce & FMCG Cargo",
-    description:
-      "We provide efficient transportation for e-commerce and FMCG goods, ensuring fast and reliable delivery to meet customer demands.",
-    image: "/images/home-service-ecommerce.jpg",
-    rotation: "-rotate-6",
-    opacity: "opacity-80",
-    zIndex: "z-0",
-  },
-  {
-    title: "Spare Parts, Engines, & General Goods Transport",
-    description:
-      "We safely transport spare parts, engines, and general goods, ensuring secure and timely deliveries for all types of cargo.",
-    image: "/images/home-service-parts.jpg",
-    rotation: "rotate-6",
-    opacity: "opacity-80",
-    zIndex: "z-0",
-  },
-];
 
 export default function Home() {
   return (
@@ -264,76 +236,7 @@ export default function Home() {
       </div>
 
       {/* How Can We Help You - Service Cards */}
-      <div className="w-full flex flex-col gap-12 md:gap-20 items-center mt-16 md:mt-[120px] overflow-hidden">
-        <h2 className="font-['Inter',sans-serif] font-medium text-2xl md:text-[32px] text-[#0a0a0a] text-center tracking-[-0.56px] leading-10">
-          How can we help you?
-        </h2>
-
-        <div className="relative flex items-center justify-center w-full h-[400px] md:h-[533px]">
-          {/* Left card (tilted) */}
-          <div className="absolute -rotate-6 opacity-80 w-[280px] md:w-[396px] h-[380px] md:h-[533px] -translate-x-[55%] md:-translate-x-[65%]">
-            <div className="relative w-full h-full rounded-xl overflow-hidden">
-              <img
-                src={services[1].image}
-                alt={services[1].title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute top-5 left-5 right-5 flex flex-col gap-2">
-                <h4 className="font-['Manrope',sans-serif] font-bold text-xl md:text-[28px] text-white leading-tight">
-                  {services[1].title}
-                </h4>
-                <p className="font-['Manrope',sans-serif] font-medium text-sm md:text-base text-white/85 leading-6">
-                  {services[1].description}
-                </p>
-              </div>
-              <div className="absolute inset-0 border border-[#e7e7e8] rounded-xl" />
-            </div>
-          </div>
-
-          {/* Center card */}
-          <div className="relative z-10 w-[280px] md:w-[396px] h-[380px] md:h-[533px]">
-            <div className="relative w-full h-full rounded-xl overflow-hidden">
-              <img
-                src={services[0].image}
-                alt={services[0].title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute top-5 left-5 right-5 flex flex-col gap-2">
-                <h4 className="font-['Manrope',sans-serif] font-bold text-xl md:text-[28px] text-white leading-tight">
-                  {services[0].title}
-                </h4>
-                <p className="font-['Manrope',sans-serif] font-medium text-sm text-white/85 leading-6">
-                  {services[0].description}
-                </p>
-              </div>
-              <div className="absolute inset-0 border border-[#e7e7e8] rounded-xl" />
-            </div>
-          </div>
-
-          {/* Right card (tilted) */}
-          <div className="absolute rotate-6 opacity-80 w-[280px] md:w-[396px] h-[380px] md:h-[533px] translate-x-[55%] md:translate-x-[65%]">
-            <div className="relative w-full h-full rounded-xl overflow-hidden">
-              <img
-                src={services[2].image}
-                alt={services[2].title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute top-5 left-5 right-5 flex flex-col gap-2">
-                <h4 className="font-['Manrope',sans-serif] font-bold text-xl md:text-[28px] text-white leading-tight">
-                  {services[2].title}
-                </h4>
-                <p className="font-['Manrope',sans-serif] font-medium text-sm md:text-[14px] text-white/70 leading-6">
-                  {services[2].description}
-                </p>
-              </div>
-              <div className="absolute inset-0 border border-[#e7e7e8] rounded-xl" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ServiceCards />
 
       {/* CTA Banner */}
       <div className="w-full max-w-[1216px] px-5 mt-16 md:mt-[120px]">
