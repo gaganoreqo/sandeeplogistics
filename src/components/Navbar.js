@@ -28,7 +28,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="shrink-0">
-          <Image
+          <img
             src="/images/sandeeplogistics.png"
             alt="Sandeep Logistics"
             width={40}
@@ -58,7 +58,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-2.5">
           {/* Facebook */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/sandeeplogistics"
             target="_blank"
             rel="noopener noreferrer"
             className="p-1 flex items-center justify-center"
@@ -73,7 +73,7 @@ export default function Navbar() {
           </a>
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/sandeeplogistics/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-1 flex items-center justify-center"
@@ -139,7 +139,7 @@ export default function Navbar() {
           {/* Social Icons (Mobile) */}
           <div className="flex items-center gap-3 pt-2 px-3 border-t border-gray-200 mt-1">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/sandeeplogistics"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -152,7 +152,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/sandeeplogistics/"
               target="_blank"
               rel="noopener noreferrer"
             >
